@@ -24,6 +24,37 @@
 	
 	</div>
 	
+	
+	
+	
+<button onclick="enableAutoplay()" type="button">Enable autoplay</button>
+<button onclick="disableAutoplay()" type="button">Disable autoplay</button>
+
+<audio id="song1" controls autoplay loop>
+  <source src="waves.mp3" type="audio/mpeg">
+</audio>
+
+
+<script>
+var vid = document.getElementById("song1");
+function enableAutoplay() { 
+    vid.autoplay = true;
+    vid.load();
+}
+
+function disableAutoplay() { 
+    vid.autoplay = false;
+    vid.load();
+} 
+</script> 
+
+	
+	
+	
+	
+	
+	
+	
 </body>
 
 </html>

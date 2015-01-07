@@ -3,50 +3,44 @@ body {
     background-image: url("leaves.jpg");
     background-repeat: no-repeat;
 	background-size:cover;
-
-
-
-	
 }
 
 
 button#addFile {
 
-font-size: 2em;
+	font-size: 2em;
 
-width: 200px;
-color:pink;
+	width: 200px;
+	color:pink;
 
-height: 80px;
+	height: 80px;
 
 }
 
 button#applyEffect {
 
-font-size: 2em;
-width: 200px;
-color:blue;
+	font-size: 2em;
+	width: 200px;
+	color:blue;
 
-height: 80px;
+	height: 80px;
 }
 
 
 
 ul#ulButtons {
 
-display: block;
-position: absolute;
-top: 100px	;
-
-
+	display: block;
+	position: absolute;
+	top: 100px	;
 }
 
 ul#ulButtons li{
+	display: block;
+	margin: 30px ;	
+}
 
-display: outline;
-margin: 30px ;
-
-
-
+#song1{
+	opacity:0;
 	
 }
