@@ -1,6 +1,7 @@
 var eap = document.getElementById("eap");
 var vid = document.getElementById("song1");
 var slider = document.getElementById("slider1");
+var linkdl = document.getElementById("download");
 var canvas = document.getElementById("myCanvas");
 var canvas1 = document.getElementById("urCanvas");
 var canvas2 = document.getElementById("ourCanvas");
@@ -9,6 +10,8 @@ var context1 = canvas1.getContext("2d");
 var context2 = canvas2.getContext("2d");
 var img = new Image();
 slider.style.visibility="hidden";
+linkdl.style.visibility="hidden";
+
 var isMute = false;
 
 window.onload = function(){
@@ -41,7 +44,8 @@ function readURL(input) {
         
 		img.src = URL.createObjectURL(input.files[0]);
 
-		slider.style.visibility="visible";
+		slider.style.visibility = "visible";
+		linkdl.style.visibility = "visible";
 
 		img.onload = function() {
 			canvas.width = canvas1.width = canvas2.width = img.width;
@@ -71,7 +75,7 @@ $("#slider1").change(function(){
 			imageData.data[pos++] = Math.random() * 255;
 			imageData.data[pos++] = Math.random() * 255;
 			imageData.data[pos++] = Math.random() * 255;
-			imageData.data[pos++] = document.getElementById("slider1").value; // opaque alpha
+			imageData.data[pos++] = document.getElementById("slider1").value;
 		}
 	}
 
@@ -80,4 +84,13 @@ $("#slider1").change(function(){
 	context2.drawImage(canvas1, 0 ,0);
 	context1.restore();
 });
+
+function downloadCanvas(link, canvasId, filename) {
+    linkdl.href = document.getElementById(canvasId).toDataURL();
+    linkdl.download = filename;
+}
+
+document.getElementById('download').addEventListener('click', function() {
+    downloadCanvas(this, 'ourCanvas', 'test.png');
+}, false);
 

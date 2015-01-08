@@ -52,3 +52,9 @@ ul#ulButtons li{
 	top: 100px;
 }
 
+#download{
+	position:  fixed;
+	left: 30px;
+	top: 130px;
+}
+
