@@ -14,7 +14,6 @@
 	<canvas id="urCanvas"></canvas>
 	<canvas id="ourCanvas"></canvas>
 
-
 	<ul id="ulButtons">
 		<li>
 			<div class="image-upload">
@@ -27,15 +26,20 @@
 		</li>
 	</ul>
 	
-<button id="eap" type="button">Toggle Sound</button>
+
+<a id="eap">
+	<img src="togle.png" width="140" height="70" />
+</a>
+
+<input hidden id="eap" type="file" accept="image/*"/>
 
 <input id="slider1" type="range" min="0" max="255" step="1" value ="10" />
 
 <a id="download">
-	<img src="img/download.png" width="50" height="50" />
+	<img src="download.png" width="240" height="120" />
 </a>
 
-<audio id="song1" controls autoplay loop>
+<audio hidden id="song1" controls autoplay loop>
   <source src="music/waves.mp3" type="audio/mpeg">
 </audio>
 

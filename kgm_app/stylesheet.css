@@ -16,23 +16,44 @@ body {
 }
 
 
+#download:hover{
+	opacity: 1;
+}
+#ulButtons:hover {
+	opacity: 1;
+}
+#eap:hover {
+	opacity: 1;
+}
+#eap{
+	opacity: 0.7;
+}
+
+#slider1{
+	position: fixed;
+	left: 50px;
+	top: 160px;
+}
+
+#download{
+	position:  fixed;
+	left: 40px;
+	top: 200px;
+	opacity: 0.7;
+}
 
 ul#ulButtons {
-
 	display: block;
 	position: absolute;
-	top: 200px	;
+	top: 350px	;
 	font-style:Castellar;	
+	opacity: 0.7;
 }
 
 ul#ulButtons li{
 	display: block;
 	margin: 40px ;	
 	font-style:Chiller;
-}
-
-#song1{
-	opacity:0;
 }
 
 .image-upload > input
@@ -46,15 +67,4 @@ ul#ulButtons li{
 	position: absolute;
 }
 
-#slider1{
-	position: fixed;
-	left: 30px;
-	top: 100px;
-}
-
-#download{
-	position:  fixed;
-	left: 30px;
-	top: 130px;
-}
 
