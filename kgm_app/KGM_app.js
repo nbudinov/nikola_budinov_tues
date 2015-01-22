@@ -62,6 +62,7 @@ $("#file-input").change(function(){
     readURL(this);
 });
 
+var e = document.getElementById("options");
 $("#slider1").change(function(){
 	width = canvas1.width;
 	height = canvas1.height;
@@ -70,12 +71,27 @@ $("#slider1").change(function(){
 
 	pos = 0;
 
+	var strUser = e.options[e.selectedIndex].value;
+	console.log(strUser)
+
 	for (y = 0; y < height; y++) {
 		for (x = 0; x < width; x++) {
-			imageData.data[pos++] = Math.random() * 255;
-			imageData.data[pos++] = Math.random() * 255;
-			imageData.data[pos++] = Math.random() * 255;
+
+			var rand = Math.random() * 255;
+
+			if(strUser == 2){
+				imageData.data[pos++] = rand;
+				imageData.data[pos++] = rand;
+				imageData.data[pos++] = rand;
+			}
+			else{
+				imageData.data[pos++] = Math.random() * 255;
+				imageData.data[pos++] = Math.random() * 255;
+				imageData.data[pos++] = Math.random() * 255;
+			}
+
 			imageData.data[pos++] = document.getElementById("slider1").value;
+
 		}
 	}
 
