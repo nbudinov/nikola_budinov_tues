@@ -35,6 +35,12 @@ body {
 	top: 160px;
 }
 
+#options{
+	position: fixed;
+	left: 55px;
+	top: 110px;
+}
+
 #download{
 	position:  fixed;
 	left: 40px;
